@@ -1,4 +1,4 @@
-package com.praktikum.demo.service.impl;
+package com.praktikum.demo.service;
 
 import com.praktikum.demo.db.mysql.entity.TbMasterAset;
 

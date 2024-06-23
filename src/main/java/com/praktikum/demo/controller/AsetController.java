@@ -1,7 +1,7 @@
 package com.praktikum.demo.controller;
 
 import com.praktikum.demo.db.mysql.entity.TbMasterAset;
-import com.praktikum.demo.service.impl.AsetService;
+import com.praktikum.demo.service.AsetService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
