@@ -9,4 +9,6 @@ public interface AsetService {
     TbMasterAset createAset(TbMasterAset tbMasterAset);
     TbMasterAset getDataAsetById(Long id);
     void deleteAsetById(Long id);
+    //QUERY
+    List<TbMasterAset>getAllDataAsetQuery();
 }

@@ -27,4 +27,8 @@ public class AsetServiceImpl implements AsetService {
     public void deleteAsetById(Long id){
         tbMasterAsetRepository.deleteById(id);
     }
+
+    public List<TbMasterAset> getAllDataAsetQuery(){
+        return tbMasterAsetRepository.getAsetQuery();
+    }
 }

@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @Slf4j
 @RestController
 @RequestMapping(value ="/asset", produces = "application/json")
@@ -17,7 +18,7 @@ import java.util.List;
 public class AsetController {
     @Autowired
     private AsetService asetService;
-
+    // @CrossOrigin(origins = "*")
     @GetMapping("/get-aset")
     public List<TbMasterAset> reqAset(){
         return asetService.getAllDataAset();
@@ -32,9 +33,14 @@ public class AsetController {
     public TbMasterAset createAset(@RequestBody TbMasterAset tbMasterAset) {
         return asetService.createAset(tbMasterAset);
     }
-
     @DeleteMapping("/delete-aset/{id}")
     public void deleteAset(@PathVariable Long id) {
         asetService.deleteAsetById(id);
+    }
+
+    //LATIHAN JIKA TANPA MAGIC QUERY
+    @GetMapping("/get-aset-query")
+    public List<TbMasterAset> reqAsetQuery(){
+        return asetService.getAllDataAsetQuery();
     }
 }
